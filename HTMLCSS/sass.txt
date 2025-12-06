@@ -1,0 +1,20 @@
+Helps remove CSS redundancy
+
+makes the code better and more neat
+
+To install choco paste in PS>admin
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+To install sass:
+
+choco install sass
+
+In project folder:
+sass variables.scss:variables.css
+
+To automate the compilation:
+sass --watch variables.scss:variables.css
+
+
+gives the ability to nest css selectors inside other selectors

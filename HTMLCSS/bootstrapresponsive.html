@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .container{
+            background-color: darkblue;
+        }
+
+        .col-3, .col-6, .new{
+            color: yellow;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">First Section</div>
+            <div class="col-3">Second Section</div>
+            <div class="col-3">Third Section</div>
+        </div>
+    </div>
+
+    <!-- depending on screen size lg-large screen md-medium screen sm-small screen -->
+    <div class="container">
+        <div class="row">
+            <div class="new col-lg-3 col-md-3 col-sm-6">First Section</div>
+            <div class=" new col-lg-3 col-md-3 col-sm-6">Second Section</div>
+            <div class="new col-lg-3 col-md-3 col-sm-6">Third Section</div>
+            <div class="new col-lg-3 col-md-3 col-sm-6">Fourth Section</div>
+        </div>
+    </div>
+</body>
+</html>

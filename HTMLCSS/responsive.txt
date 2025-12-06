@@ -1,0 +1,4 @@
+Viewport - part of the screen that the user can see
+Media Queries
+Flexbox
+Grids
