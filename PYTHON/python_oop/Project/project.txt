@@ -1,0 +1,5 @@
+A hotel management system
+User inputs name and number
+the hotel has a capacity
+the code keeps running until the final guest checks in
+when guest checks out another one can join
