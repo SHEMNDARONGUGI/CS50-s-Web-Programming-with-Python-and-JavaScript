@@ -23,4 +23,6 @@ def events(request):
 def pricing(request):
     return render(request, 'LMS/pricing.html')
 
-def 
+def greet(request, name):
+    return HttpResponse(f'Hello, { name }')
+    
