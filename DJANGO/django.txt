@@ -13,3 +13,67 @@ Status code:
 
 Start:
 pip install django
+django-admin startproject <project>
+cd project
+django manage.py startapp <appname>
+
+SQLite Types
+text
+numeric
+Integer
+real
+blob
+CHAR(size)
+VARCHAR(size)
+SMALLINT
+INT 
+BIGINT
+FLOAT
+DOUBLE
+
+CREATE TABLE flights(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    duration INTEGER NOT NULL
+)
+
+Constraints
+-CHECK
+-DEFAULT
+-NOT NULL
+-PRIMARY KEY
+-UNIQUE
+
+INSERT INTO flights
+    (origin, destination, duration)
+    VALUES ("New York", "London", 415);
+
+SELECT - retrieving data
+
+SELECT * FROM flights;
+
+SELECT origin, destination FROM flights;
+SELECT origin, destination WHERE id = 3;
+SELECT * FROM flights WHERE origin = "New York";
+
+.mode columns
+.headers yes
+
+SELECT * FROM flights WHERE origin LIKE "%a%"; //where there's an 'a' in the origin columns
+
+Functions/Aggregation
+
+one to many
+many to many
+
+JOINS
+JOIN/ INNER JOIN
+LEFT OUTER JOIN
+RIGHT OUTER JOIN
+
+CREATE INDEX name_index on Passengers
+
+SQL INJECTION
+
+django models
