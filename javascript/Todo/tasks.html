@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            //By default, submit button is disabled
+            document.querySelector('#submit').disabled = true;
+            document.querySelector('#task').onkeyup = ()=>{
+                if(document.querySelector('#task').value.length > 0){
+                    document.querySelector('#submit').disabled = false;
+                } else
+                 {
+                    document.querySelector('#submit').disabled = true;
+                 }
+                
+            }
+            document.querySelector('form').onsubmit = ()=>{
+                const task = document.querySelector('#task').value;
+                console.log(task);
+
+                const li = document.createElement('li');
+                li.textContent = task;
+
+                document.querySelector('#tasks').append(li);
+
+                // clearing the input field
+                document.querySelector('#task').value = '';
+                document.querySelector('#submit').disabled = true;
+
+                
+
+                //Stop form from submitting
+                return false;
+
+                //local storage
+                // localStorage.getItem(key)
+                //localStorage.setItem(key, value)
+
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul id="tasks">
+
+    </ul>
+    <form action="">
+        <input type="text" placeholder="New Task" id="task">
+        <input type="submit" name="" id="submit">
+    </form>
+
+    <ol id="name">
+
+    </ol>
+</body>
+</html>

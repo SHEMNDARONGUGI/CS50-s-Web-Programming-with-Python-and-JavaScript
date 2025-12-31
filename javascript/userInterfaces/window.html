@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Counter</title>
+</head>
+
+<body>
+
+    <button id="counterBtn">Add Line</button>
+    <div id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 1;
+
+            const addLine = () => {
+                const p = document.createElement('p');          
+                // create a new <p> element
+                p.textContent = `${count}`;        
+                // set its text
+                document.getElementById('container').appendChild(p); 
+                // add it to the container
+                count++;                                        
+                // increment counter
+            }
+
+            document.getElementById('counterBtn').addEventListener('click', addLine);
+        });
+
+        window.onscroll = () =>{
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight){
+                document.querySelector('body').style.background = 'green';
+            } else {
+                document.querySelector('body').style.background = 'white';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

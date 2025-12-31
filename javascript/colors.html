@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // changing font color to red
+            // document.querySelectorAll('button').forEach(button => {
+            //     button.onclick = () => {
+            //         document.querySelector('#hello').style.color = button.dataset.color;
+            //     }
+            // });
+
+            document.querySelector('select').onchange= function() {
+                document.querySelector('#hello').style.color = this.value;
+            }
+    
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="hello">Sometimes it's Just crazy</h1>
+    <select name="" id="">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">green</option>
+    </select>
+</body>
+</html>
+
+<!-- // addEventListener
+onclick
+onmouseover
+onkeydown
+onkeyup
+onload
+onblur -->

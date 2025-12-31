@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="number" placeholder="First Number" id="first">
+    <input type="number" placeholder="Second Number" id="second">
+    <button onclick="sum()">Add</button>
+    <button onclick="subtraction()">Subtract</button>
+    <button onclick="division()">Divide</button>
+    <button onclick="multiplication()">Multiply</button>
+    <script>
+        const sum =() =>{
+            let first = (document.getElementById('first').value)/1
+            let second = (document.getElementById('second').value)/1
+
+            alert(`${first} + ${second} is ${first + second}`);
+        } 
+
+        
+        const subtraction =() =>{
+            let first = (document.getElementById('first').value)/1
+            let second = (document.getElementById('second').value)/1
+
+            alert(`${first} - ${second} is ${first - second}`);
+        } 
+
+        const division =() =>{
+            let first = (document.getElementById('first').value)/1
+            let second = (document.getElementById('second').value)/1
+            if(second !== 0){
+                alert(`${first} / ${second} is ${first / second}`);
+            } else {
+                alert('Division by Zero is not allowed')
+            }
+            
+        } 
+
+        const multiplication =() =>{
+            let first = (document.getElementById('first').value)/1
+            let second = (document.getElementById('second').value)/1
+
+            alert(`${first} * ${second} is ${first * second}`);
+        } 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            document.querySelector('form').onsubmit = function () {
+                fetch('https://api.fastforex.io/fetch-all?api_key=72d4394cb0-77c4c5213f-t818gk')
+                    .then(response => response.json())
+                    .then(data => {
+                        const currency = document.querySelector('#currency').value.toUpperCase();
+                        const rate = data.results[currency];
+                        if(rate !== undefined){
+                            document.querySelector('#result').textContent = `1 USD is equal to ${rate.toFixed(3)} ${currency}`;
+                        } else {
+                            document.querySelector('#result').textContent = 'Invalid currency.'
+                        }
+                        console.log(currency)
+                        
+                    })
+                    .catch(err => console.error(error));
+
+                return false;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="currency" placeholder="Currency">
+        <input type="submit" value="Convert" id="">
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+
+</html>
